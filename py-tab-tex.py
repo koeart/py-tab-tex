@@ -77,6 +77,25 @@ def init_parser():
         action="store_true",
         default=True
         )
+        
+    parser.add_option(
+        "--file",
+        "-f",
+        dest="infile",
+        help=u"File aus dem Daten gelesen werden sollen. Default: $default",
+        action="store",
+        default="daten.csv",
+        metavar="FILE")
+    
+    parser.add_option(
+        "--out",
+        "-o",
+        dest="outfile",
+        help=u"File in das gespeichert wird. Default: $default",
+        action="store",
+        default="tabelle.tex",
+        metavar="FILE")
+        
     options = parser.parse_args()[0]
     return options
     
@@ -84,8 +103,8 @@ def main():
     delimiters = dict(between = ' & ',
                   ende = '\\\\\n',
                   line = '')
-    data = "data.csv"
-    outfile = "daten.tex"
+    data = "daten.csv"
+    outfile = "tabelle.tex"
     f = open(data, 'rb')
     w = open(outfile, 'wb')
     mydialect = csv.Sniffer().sniff(f.readline(1024))
