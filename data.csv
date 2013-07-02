@@ -1,0 +1,5 @@
+"name"; "eigenschaft1"; "eigenschaft2"; "eigenschaft3"; "eigenschaft4"
+"bla"; "100m"; "200g"; "eine ganz langer Text steht hier"; "anderer foo \hallo"
+"blubb"; "200m"; "100g"; "ein kurzer Text"; "a"
+"blib"; "g"; ; "100"; "10"
+
